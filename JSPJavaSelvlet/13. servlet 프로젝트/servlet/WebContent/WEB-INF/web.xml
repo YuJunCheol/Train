@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>servlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 웹어플리케이션(톰캣)이 구동될 때 서블릿을 자동으로 실행 -->
+  <servlet>
+  	<servlet-name>DBCPInit</servlet-name>
+  	<servlet-class>jdbc.DBCPInit</servlet-class>
+  	<init-param>
+  		<param-name>driver</param-name>
+  		<param-value>org.mariadb.jdbc.Driver</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>url</param-name>
+  		<param-value>jdbc:mariadb://localhost:3307/aidb</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>id</param-name>
+  		<param-value>root</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>pwd</param-name>
+  		<param-value>aiuser</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>poolName</param-name>
+  		<param-value>aidb</param-value>
+  	</init-param>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <!-- 서블릿 등록 -->  
+  <servlet>
+  	<servlet-name>hello</servlet-name>
+  	<servlet-class>sample.HelloServlet</servlet-class>
+  </servlet>
+  <!-- URL 매핑(주소와 서블릿) -->
+  <servlet-mapping>
+  	<servlet-name>hello</servlet-name>
+  	<url-pattern>/hello.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 서블릿 등록 -->  
+  <servlet>
+  	<servlet-name>sample</servlet-name>
+  	<servlet-class>sample.ControllerSample</servlet-class>
+  </servlet>
+  <!-- URL 매핑(주소와 서블릿) -->
+  <servlet-mapping>
+  	<servlet-name>sample</servlet-name>
+  	<url-pattern>/sample.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 서블릿 등록 -->  
+  <servlet>
+  	<servlet-name>studentList</servlet-name>
+  	<servlet-class>student.StudentList</servlet-class>
+  </servlet>
+  <!-- URL 매핑(주소와 서블릿) -->
+  <servlet-mapping>
+  	<servlet-name>studentList</servlet-name>
+  	<url-pattern>/studentList.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 서블릿 등록 -->  
+  <servlet>
+  	<servlet-name>controllerByFile</servlet-name>
+  	<servlet-class>mvc.controller.ControllerByFile</servlet-class>
+  	<init-param>
+  		<param-name>configFile</param-name>
+  		<param-value>/WEB-INF/commandHandler.properties</param-value>
+  	</init-param>
+  	<load-on-startup>2</load-on-startup>
+  </servlet>
+  <!-- URL 매핑(주소와 서블릿) -->
+  <servlet-mapping>
+  	<servlet-name>controllerByFile</servlet-name>
+  	<url-pattern>/controllerByFile.do</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

@@ -1,0 +1,25 @@
+Servlet
+- 자바파일에 html코드가 포함
+- 자바파일
+- HttpServlet 상속
+- doGet(), doPost() 재정의
+- doGet : get방식 요청
+- doPost : post방식 요청
+
+초기화 파라미터
+- 서블릿으로 초기화용도의 파라미터(이름,값)를 전달
+<init-param>
+<param-name>이름</param-name>
+<param-value>값</param-value>
+</init-param>
+
+
+http://도메인:포트/컨텍스트패스/경로
+컨텍스트패스 : /컨텍스트패스
+경로 : /경로
+
+url-pattern 예시
+/hello/* -> /hello/index.do, /hello/index.html, /hello/hello.do...
+*.do -> index.do, write.do, /hello/student/edit.do.....
+/hello/*.do -> /hello/index.do,/hello/write.do...
+/hello -> /hello

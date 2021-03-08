@@ -1,0 +1,11 @@
+Connection Pool (커넥션 풀)
+- 커넥션  DB접속
+- pool  수영장
+- DB접속(자원)은 동시 접속 사용자가 많아질 수록 성능이 떨어짐
+- 위 문제를 해결하기 위한 기법
+- DB접속하는 소요시간을 줄일 수 있음
+- DBCP 라이브러리(API) 사용
+commons-dbcp
+commons-pool
+commons-logging
+- 다운받은 jar파일을 WEB-INFlib에 복사

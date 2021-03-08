@@ -1,0 +1,44 @@
+servlet(server+applet) : java코드 안에 html
+JSP(Java Server Page) : html안에 java코드
+
+서버 요청 예)
+http://localhost:8080/webapp/test/index.jsp
+프로토콜://도메인:포트/ContextPath(프로젝트명)/폴더명/파일명
+
+쿼리스트링(querystring)
+?a=1&b=2&c=3
+a : 1
+b : 2
+c : 3
+
+
+JSP 구동방식
+xxx.jsp -> xxx.java(변환) -> 컴파일 -> xxx.class
+
+JSP 구성요소
+- 디렉티브(directive), 지시어, 지시자
+JSP 페이지 설정 용도
+<%@ 디렉티브명 속성명="속성값"...%>
+- 디렉티브 종류
+page : 페이지에대한 정보
+taglib : 태그 라이브러리
+include : 특정 영역에 다른 파일을 포함
+
+- 스크립트
+html문서 내용을 동적으로 생성하기 위해 사용
+* expression : 출력
+* scriptlet : 자바코드
+* declaration : 자바 메서드를 선언(거의 사용 안함)
+
+- 기본 객체(내장 객체)
+이미 생성이 되어 있는 객체
+request, response, session
+
+
+page 디렉티브의 속성
+import : 패키지 포함한 fullname 대신 클래스명만 사용
+
+WEB-INF 폴더의 용도
+- classes : 클래스파일
+- lib : 라이브러리 (jar파일)
+- web.xml : 설정파일

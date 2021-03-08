@@ -1,0 +1,13 @@
+웹관련 기술
+- 언어 : java
+- 웹서버 : apache, webtobe
+- 웹어플리케이션서버(WAS) : tomcat, jeus
+- 서버 웹기술 : jsp, servlet
+- 서버 웹기술을 위한 프레임워크 : Spring MVC
+- 클라이언트 웹기술 : HTML, CSS, JavaScript
+- 클라이언트 웹기술을 위한 프레임워크/라이브러리
+: jQuery, AngularJS, Vuejs
+- DBMS : MySQL, MariaDB, MS-SQL, Oracle...
+- DB연동 : JDBC, MyBatis(iBatis), JPA
+- 네트워크 통신 프로토콜 : http(80) / https(443)
+- OS : Ubuntu, CentOS, Fedora, Windows Server

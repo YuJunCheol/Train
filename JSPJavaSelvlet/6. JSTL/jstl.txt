@@ -1,0 +1,16 @@
+JSTL (JSP Standard Tag Library)
+- JSP 표준 태그 라이브러리
+- JSP 코드 너무 복잡하고, 지저분해보이는데,
+EL, JSTL을 사용하면 간결하고 가독성이 높음
+- JSTL 태그 종류
+코어(core) - 출력, 조건, 반복
+XML(xml)
+포맷(fmt) - 날짜, 통화..
+sql(sql)
+함수(functions)
+- 라이브러리(jar) 다운로드
+maven repository에서 jar파일 다운로드
+아래 경로에 저장
+D:\AI\workspace\webapp\WebContent\WEB-INF\lib
+해당 프로젝트의 WEB-INF\lib 폴더 안에
+이클립스에서 확인
